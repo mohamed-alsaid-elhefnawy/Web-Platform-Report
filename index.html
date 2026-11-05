@@ -1,0 +1,692 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS: How to Change Colors, Fonts, and Website Designs</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            line-height: 1.7;
+            color: #2d3748;
+            background-color: #f7fafc;
+            margin: 0;
+            padding: 24px;
+        }
+
+        .container {
+            max-width: 920px;
+            margin: 0 auto;
+            background: #ffffff;
+            padding: 40px 50px;
+            border-radius: 12px;
+            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+        }
+
+        header {
+            text-align: center;
+            border-bottom: 2px solid #edf2f7;
+            padding-bottom: 24px;
+            margin-bottom: 32px;
+        }
+
+        .header-logo {
+            margin-bottom: 16px;
+        }
+
+        h1 {
+            color: #1a365d;
+            font-size: 2.1rem;
+            margin-bottom: 16px;
+            line-height: 1.3;
+        }
+
+        .student-info {
+            background-color: #ebf8ff;
+            border-left: 4px solid #3182ce;
+            padding: 14px 22px;
+            margin: 18px auto;
+            border-radius: 4px;
+            max-width: 480px;
+            text-align: left;
+        }
+
+        .student-info p {
+            margin: 6px 0;
+            color: #2b6cb0;
+            font-size: 1rem;
+        }
+
+        h2 {
+            color: #2b6cb0;
+            border-bottom: 2px solid #e2e8f0;
+            padding-bottom: 8px;
+            margin-top: 40px;
+            font-size: 1.55rem;
+        }
+
+        h3 {
+            color: #2d3748;
+            margin-top: 28px;
+            font-size: 1.25rem;
+        }
+
+        p {
+            margin: 12px 0;
+            color: #4a5568;
+        }
+
+        ul, ol {
+            margin: 12px 0 16px 24px;
+            color: #4a5568;
+        }
+
+        li {
+            margin-bottom: 8px;
+        }
+
+        pre {
+            background-color: #1a202c;
+            color: #edf2f7;
+            padding: 16px;
+            border-radius: 8px;
+            overflow-x: auto;
+            font-family: "Courier New", Courier, monospace;
+            font-size: 0.9rem;
+            margin: 14px 0;
+        }
+
+        code {
+            font-family: "Courier New", Courier, monospace;
+            background-color: #edf2f7;
+            color: #d63384;
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-size: 0.9em;
+        }
+
+        pre code {
+            background-color: transparent;
+            color: inherit;
+            padding: 0;
+        }
+
+        /* Table Styling */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            background: #ffffff;
+            font-size: 0.95rem;
+        }
+
+        th, td {
+            border: 1px solid #cbd5e0;
+            padding: 12px 14px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #edf2f7;
+            color: #2d3748;
+            font-weight: bold;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f7fafc;
+        }
+
+        /* Image Display Styling */
+        .img-container {
+            text-align: center;
+            margin: 24px 0;
+            background: #f8fafc;
+            border: 1px solid #e2e8f0;
+            border-radius: 8px;
+            padding: 16px;
+        }
+
+        .img-container img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 6px;
+        }
+
+        .img-caption {
+            font-size: 0.85rem;
+            color: #718096;
+            margin-top: 10px;
+            font-style: italic;
+        }
+
+        /* Live Rendered Output Showcase Components */
+        .live-preview {
+            border: 1px solid #e2e8f0;
+            border-radius: 8px;
+            background: #ffffff;
+            margin: 16px 0 24px 0;
+            overflow: hidden;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.04);
+        }
+
+        .preview-bar {
+            background: #edf2f7;
+            padding: 8px 14px;
+            font-size: 0.8rem;
+            font-weight: bold;
+            color: #4a5568;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            border-bottom: 1px solid #e2e8f0;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .preview-dot {
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            display: inline-block;
+        }
+
+        .dot-red { background-color: #fc8181; }
+        .dot-yellow { background-color: #f6e05e; }
+        .dot-green { background-color: #68d391; }
+
+        .preview-body {
+            padding: 20px;
+        }
+
+        /* Live Button Demo Styles */
+        .demo-btn-styled {
+            background-color: #007bff;
+            color: white;
+            padding: 12px 24px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 15px;
+            font-weight: 500;
+            transition: background-color 0.2s ease, transform 0.1s ease;
+        }
+
+        .demo-btn-styled:hover {
+            background-color: #0056b3;
+            transform: translateY(-1px);
+        }
+
+        .demo-btn-unstyled {
+            padding: 4px 8px;
+            font-size: 13px;
+        }
+
+        .comparison-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 16px;
+            align-items: center;
+            text-align: center;
+        }
+
+        @media (max-width: 600px) {
+            .comparison-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .comparison-item {
+            background: #f8fafc;
+            border: 1px dashed #cbd5e0;
+            padding: 20px;
+            border-radius: 8px;
+        }
+
+        /* Live Card Demo */
+        .demo-card {
+            background-color: white;
+            border: 1px solid #ddd;
+            border-radius: 12px;
+            padding: 20px;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+            max-width: 380px;
+            margin: 0 auto;
+        }
+
+        .demo-card-title {
+            margin: 0 0 8px 0;
+            font-size: 1.15rem;
+            color: #2b6cb0;
+            font-weight: bold;
+        }
+
+        .demo-card p {
+            margin: 0 0 12px 0;
+            font-size: 0.95rem;
+            color: #4a5568;
+        }
+
+        /* Live Flexbox Demo */
+        .demo-flex-container {
+            display: flex;
+            gap: 16px;
+        }
+
+        .demo-flex-box {
+            flex: 1;
+            padding: 24px 16px;
+            background-color: #ebf8ff;
+            border: 2px solid #bee3f8;
+            border-radius: 8px;
+            text-align: center;
+            font-weight: bold;
+            color: #2b6cb0;
+        }
+
+        @media (max-width: 600px) {
+            .demo-flex-container {
+                flex-direction: column;
+            }
+        }
+
+        a {
+            color: #3182ce;
+            text-decoration: none;
+            transition: color 0.2s ease;
+        }
+
+        a:hover {
+            color: #2b6cb0;
+            text-decoration: underline;
+        }
+
+        footer {
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px solid #e2e8f0;
+            text-align: center;
+            font-size: 0.85rem;
+            color: #a0aec0;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+
+    <!-- 1. HEADER: RESEARCH TITLE AND STUDENT INFORMATION -->
+    <header>
+        <div class="header-logo">
+            <img src="css-logo.svg" alt="Official CSS3 Logo" width="90" height="90">
+        </div>
+        <h1>CSS: How to Change Colors, Fonts, and Website Designs</h1>
+        
+        <div class="student-info">
+            <p><strong>Name:</strong> Ahmed Hamdy El-Riashy Raghib</p>
+            <p><strong>Student ID:</strong> 2502824</p>
+            <p><strong>Academic Year:</strong> 2026 / 2027</p>
+        </div>
+    </header>
+
+    <!-- 2. INTRODUCTION SECTION -->
+    <h2>Introduction</h2>
+    <p>
+        In the modern world, websites have become an essential part of everyday life. People use websites for education, communication, shopping, business, and entertainment. However, a website needs more than information to be attractive and easy to use. It also needs a good design, suitable colors, readable fonts, and an organized layout.
+    </p>
+    <p>
+        <strong>CSS</strong>, which stands for <b>Cascading Style Sheets</b>, is one of the main technologies used in web development. It controls the appearance and presentation of web pages. Using CSS, developers can change colors, fonts, backgrounds, spacing, borders, and the overall layout of a website.
+    </p>
+    <p>
+        This report explains the meaning of <b>CSS</b>, how it works with <strong>HTML</strong>, and how it can be used to improve the appearance and usability of websites.
+    </p>
+
+    <!-- 3. BODY SECTION -->
+    <h2>Body</h2>
+
+    <h3>2. What Is CSS?</h3>
+    <p>
+        <strong>CSS</strong> is a style sheet language used to describe how <b>HTML</b> elements should appear on a web page. While HTML provides the structure and content of a website, CSS controls its visual design.
+    </p>
+    <p>For example:</p>
+    <ul>
+        <li><strong>HTML</strong> creates a heading, paragraph, image, or button.</li>
+        <li><strong>CSS</strong> changes the heading color, paragraph font, image size, and button appearance.</li>
+    </ul>
+
+    <p>CSS can be added to an HTML document in three main ways:</p>
+    <ol>
+        <li><b>Inline CSS:</b> Styles are written directly inside an HTML element using the <code>style</code> attribute.</li>
+        <li><b>Internal CSS:</b> Styles are written inside a <code>&lt;style&gt;</code> element in the HTML document.</li>
+        <li><b>External CSS:</b> Styles are written in a separate file with a <code>.css</code> extension and connected to the HTML document. This method is commonly preferred for larger websites because it makes the design easier to manage and update.</li>
+    </ol>
+
+    <!-- Simple Table to Summarize/Compare Work -->
+    <table>
+        <tr>
+            <th>Method</th>
+            <th>Where Styles Are Placed</th>
+            <th>Best Used For</th>
+        </tr>
+        <tr>
+            <td><strong>Inline CSS</strong></td>
+            <td>Directly inside an HTML element using the <code>style</code> attribute</td>
+            <td>Quick testing or styling a single individual element</td>
+        </tr>
+        <tr>
+            <td><strong>Internal CSS</strong></td>
+            <td>Inside the <code>&lt;style&gt;</code> tag within the HTML <code>&lt;head&gt;</code> section</td>
+            <td>Single-page websites with unique styles</td>
+        </tr>
+        <tr>
+            <td><strong>External CSS</strong></td>
+            <td>In a separate <code>.css</code> file connected via the <code>&lt;link&gt;</code> tag</td>
+            <td>Large and multi-page websites for consistency and easy updates</td>
+        </tr>
+    </table>
+
+    <h3>3. Changing Website Colors Using CSS</h3>
+    <p>
+        Colors are important in website design because they attract attention, communicate meaning, and create a visual identity.
+    </p>
+    <p>CSS provides several ways to define colors, including:</p>
+    <ul>
+        <li><b>Color names</b>, such as <code>red</code>, <code>blue</code>, and <code>green</code>.</li>
+        <li><b>HEX values</b>, such as <code>#FF0000</code>.</li>
+        <li><b>RGB values</b>, such as <code>rgb(255, 0, 0)</code>.</li>
+    </ul>
+
+    <!-- Image for Color Formats -->
+    <div class="img-container">
+        <img src="color-models.svg" alt="Illustration of CSS Color Definition Methods: Color Names, HEX Values, and RGB Values">
+        <p class="img-caption">Figure 1: Common CSS Color Formats (Color Names, HEX Codes, and RGB)</p>
+    </div>
+
+    <p>
+        The <code>color</code> property changes text color, while <code>background-color</code> changes the background of an element.
+    </p>
+
+    <p><strong>Example:</strong></p>
+<pre><code>body { 
+    background-color: #f2f2f2; 
+} 
+ 
+h1 { 
+    color: blue; 
+} 
+ 
+p { 
+    color: #333333; 
+}</code></pre>
+
+    <!-- Live Output Preview: Color Example -->
+    <div class="live-preview">
+        <div class="preview-bar">
+            <span class="preview-dot dot-red"></span>
+            <span class="preview-dot dot-yellow"></span>
+            <span class="preview-dot dot-green"></span>
+            <span>Live Output Preview: Color & Background Example</span>
+        </div>
+        <div class="preview-body" style="background-color: #f2f2f2; border-radius: 0 0 8px 8px;">
+            <p style="color: blue; margin: 0 0 10px 0; font-size: 22px; font-weight: bold;">Heading in Blue (#0000FF)</p>
+            <p style="color: #333333; margin: 0; font-size: 16px;">This paragraph text appears in dark gray (#333333) over a light gray background (#f2f2f2), ensuring comfortable contrast and readability.</p>
+        </div>
+    </div>
+
+    <p>
+        In this example, the webpage has a light gray background, the main heading appears in blue, and the paragraph text appears in dark gray.
+    </p>
+    <p>
+        Choosing suitable colors helps create a professional and comfortable user experience. Designers should also consider contrast to make text easy to read.
+    </p>
+
+    <h3>4. Changing Fonts and Text Styles</h3>
+    <p>
+        Fonts have a major effect on the readability and appearance of a website. CSS allows developers to control different text properties, including:
+    </p>
+    <ul>
+        <li><code>font-family</code>: Defines the type of font.</li>
+        <li><code>font-size</code>: Controls the size of the text.</li>
+        <li><code>font-weight</code>: Controls how bold or light the text appears.</li>
+        <li><code>font-style</code>: Makes text normal or italic.</li>
+        <li><code>text-align</code>: Controls text alignment.</li>
+        <li><code>text-decoration</code>: Adds or removes decorations such as underlines.</li>
+    </ul>
+
+    <!-- Image for Typography -->
+    <div class="img-container">
+        <img src="typography-styles.svg" alt="Illustration comparing Sans-Serif heading typography with Serif paragraph typography">
+        <p class="img-caption">Figure 2: Typography Comparison — Arial (Sans-Serif) vs. Georgia (Serif)</p>
+    </div>
+
+    <p><strong>Example:</strong></p>
+<pre><code>h1 { 
+    font-family: Arial, sans-serif; 
+    font-size: 32px; 
+    font-weight: bold; 
+    text-align: center; 
+} 
+ 
+p { 
+    font-family: Georgia, serif; 
+    font-size: 18px; 
+    line-height: 1.6; 
+}</code></pre>
+
+    <!-- Live Output Preview: Typography Example -->
+    <div class="live-preview">
+        <div class="preview-bar">
+            <span class="preview-dot dot-red"></span>
+            <span class="preview-dot dot-yellow"></span>
+            <span class="preview-dot dot-green"></span>
+            <span>Live Output Preview: Typography & Text Alignment</span>
+        </div>
+        <div class="preview-body" style="background: #ffffff;">
+            <p style="font-family: Arial, sans-serif; font-size: 28px; font-weight: bold; text-align: center; color: #1a365d; margin: 8px 0 16px 0;">
+                Centered Bold Arial Heading
+            </p>
+            <p style="font-family: Georgia, serif; font-size: 18px; line-height: 1.6; color: #2d3748; margin: 0;">
+                This paragraph text is styled with the Georgia serif font family at 18px font-size. Notice how the generous 1.6 line-height provides ample vertical breathing room between each line, making continuous reading effortless and clear.
+            </p>
+        </div>
+    </div>
+
+    <p>
+        This code makes the heading large, bold, and centered. It also gives the paragraph a different font and increases the space between lines to improve readability.
+    </p>
+
+    <h3>5. Designing Website Elements</h3>
+    <p>
+        CSS can control the appearance of almost every element on a website. It can be used to design buttons, cards, navigation menus, images, and content sections.
+    </p>
+
+    <p style="font-size: 1.1rem; color: #2d3748; margin-top: 18px;"><strong>A. Buttons</strong></p>
+    <p>
+        Buttons are important interactive elements. CSS can change their colors, sizes, borders, and shapes.
+    </p>
+<pre><code>button { 
+    background-color: #007bff; 
+    color: white; 
+    padding: 12px 24px; 
+    border: none; 
+    border-radius: 8px; 
+    cursor: pointer; 
+}</code></pre>
+
+    <!-- Live Preview: Buttons Comparison -->
+    <div class="live-preview">
+        <div class="preview-bar">
+            <span class="preview-dot dot-red"></span>
+            <span class="preview-dot dot-yellow"></span>
+            <span class="preview-dot dot-green"></span>
+            <span>Live Visual Comparison: HTML Default Button vs. CSS Styled Button</span>
+        </div>
+        <div class="preview-body">
+            <div class="comparison-grid">
+                <div class="comparison-item">
+                    <p style="margin-top:0; font-weight: bold; color: #718096; font-size: 0.9rem;">Without CSS (Browser Default):</p>
+                    <button class="demo-btn-unstyled">Default Button</button>
+                </div>
+                <div class="comparison-item">
+                    <p style="margin-top:0; font-weight: bold; color: #3182ce; font-size: 0.9rem;">With CSS (Modern Styled):</p>
+                    <button class="demo-btn-styled">Styled Button</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <p style="font-size: 1.1rem; color: #2d3748; margin-top: 18px;"><strong>B. Borders and Backgrounds</strong></p>
+    <p>
+        Developers can add borders, background colors, and rounded corners to make website sections more attractive.
+    </p>
+<pre><code>.card { 
+    background-color: white; 
+    border: 1px solid #ddd; 
+    border-radius: 12px; 
+    padding: 20px; 
+}</code></pre>
+
+    <!-- Live Preview: Card Component -->
+    <div class="live-preview">
+        <div class="preview-bar">
+            <span class="preview-dot dot-red"></span>
+            <span class="preview-dot dot-yellow"></span>
+            <span class="preview-dot dot-green"></span>
+            <span>Live Output Preview: Rendered Card Component (.card)</span>
+        </div>
+        <div class="preview-body" style="background: #f7fafc;">
+            <div class="demo-card">
+                <div class="demo-card-title">Web Design Card</div>
+                <p>This card demonstrates a crisp white background, subtle border, rounded 12px corners, and comfortable 20px internal padding.</p>
+                <button class="demo-btn-styled" style="padding: 8px 16px; font-size: 13px;">Card Action</button>
+            </div>
+        </div>
+    </div>
+
+    <p style="font-size: 1.1rem; color: #2d3748; margin-top: 18px;"><strong>C. Spacing and Layout</strong></p>
+    <p>
+        CSS uses the <strong>Box Model</strong> to control the size and spacing of elements. Its main parts are:
+    </p>
+    <ul>
+        <li><strong>Content:</strong> The actual text or image.</li>
+        <li><strong>Padding:</strong> The space between the content and the border.</li>
+        <li><strong>Border:</strong> The line surrounding the element.</li>
+        <li><strong>Margin:</strong> The space outside the border.</li>
+    </ul>
+
+    <!-- Image for the Box Model -->
+    <div class="img-container">
+        <img src="box-model.svg" alt="Diagram of the CSS Box Model illustrating Content, Padding, Border, and Margin">
+        <p class="img-caption">Figure 3: The CSS Box Model Structure (Margin, Border, Padding, and Content)</p>
+    </div>
+
+    <p>
+        Understanding these properties helps developers organize webpage elements and create clean designs.
+    </p>
+
+    <h3>6. Responsive Web Design</h3>
+    <p>
+        <b>Responsive Web Design</b> is an approach that makes websites work properly on different devices, including desktop computers, tablets, and smartphones.
+    </p>
+    <p>
+        A website should automatically adapt to different screen sizes to provide a good user experience.
+    </p>
+    <p>
+        CSS supports responsive design through <strong>flexible layouts</strong>, <strong>Flexbox</strong>, <strong>CSS Grid</strong>, and <strong>Media Queries</strong>.
+    </p>
+
+    <!-- Image for Responsive Design -->
+    <div class="img-container">
+        <img src="responsive-demo.svg" alt="Illustration of Responsive Web Design showing desktop row layout adapting to mobile column layout">
+        <p class="img-caption">Figure 4: Responsive Layout Adaptation — Desktop (Row) vs. Mobile (Column)</p>
+    </div>
+
+    <p><strong>Example:</strong></p>
+<pre><code>.container { 
+    display: flex; 
+    gap: 20px; 
+} 
+ 
+@media (max-width: 600px) { 
+    .container { 
+        flex-direction: column; 
+    } 
+}</code></pre>
+
+    <!-- Live Preview: Responsive Flex Container -->
+    <div class="live-preview">
+        <div class="preview-bar">
+            <span class="preview-dot dot-red"></span>
+            <span class="preview-dot dot-yellow"></span>
+            <span class="preview-dot dot-green"></span>
+            <span>Live Output Preview: Flex Container (Resizes Dynamically)</span>
+        </div>
+        <div class="preview-body">
+            <div class="demo-flex-container">
+                <div class="demo-flex-box">Box 1</div>
+                <div class="demo-flex-box">Box 2</div>
+                <div class="demo-flex-box">Box 3</div>
+            </div>
+            <p style="font-size: 0.85rem; color: #718096; margin-top: 10px; text-align: center; font-style: italic;">
+                (These boxes arrange horizontally on wide screens and stack vertically when the screen width is 600px or less.)
+            </p>
+        </div>
+    </div>
+
+    <p>
+        In this example, the content appears horizontally on wider screens. When the screen width becomes 600 pixels or less, the elements are arranged vertically.
+    </p>
+    <p>
+        Responsive design is important because many people access websites using mobile devices.
+    </p>
+
+    <h3>7. The Importance of CSS in Website Development</h3>
+    <p>
+        CSS offers several advantages in modern web development:
+    </p>
+    <ol>
+        <li><b>Better Appearance:</b> It makes websites more attractive and professional.</li>
+        <li><b>Easy Maintenance:</b> External CSS files allow developers to update the design in one place.</li>
+        <li><b>Consistency:</b> The same styles can be applied to multiple pages.</li>
+        <li><b>Responsive Design:</b> Websites can adapt to different screen sizes.</li>
+        <li><b>Improved User Experience:</b> Clear layouts, readable text, and suitable colors make websites easier to use.</li>
+        <li><b>Time Saving:</b> Reusable styles reduce repeated work during website development.</li>
+    </ol>
+
+    <!-- 4. REFERENCES SECTION -->
+    <h2>References</h2>
+    <ul>
+        <li>
+            <a href="https://www.w3.org/Style/CSS/" target="_blank">
+                World Wide Web Consortium (W3C). CSS – Cascading Style Sheets
+            </a>
+        </li>
+        <li>
+            <a href="https://developer.mozilla.org/en-US/docs/Web/CSS" target="_blank">
+                MDN Web Docs. CSS: Cascading Style Sheets
+            </a>
+        </li>
+        <li>
+            <a href="https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/Styling_basics" target="_blank">
+                MDN Web Docs. CSS Styling Basics
+            </a>
+        </li>
+        <li>
+            <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Guides/Box_model" target="_blank">
+                MDN Web Docs. CSS Box Model
+            </a>
+        </li>
+        <li>
+            <a href="https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/CSS_layout/Responsive_Design" target="_blank">
+                MDN Web Docs. Responsive Web Design
+            </a>
+        </li>
+    </ul>
+
+    <footer>
+        <p>&copy; 2026 / 2027 Ahmed Hamdy El-Riashy Raghib — Academic Research Report</p>
+    </footer>
+
+</div>
+
+</body>
+</html>

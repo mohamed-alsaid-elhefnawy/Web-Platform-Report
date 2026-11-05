@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 320" width="100%" height="auto">
+  <defs>
+    <filter id="shadow" x="-5%" y="-5%" width="110%" height="115%">
+      <feDropShadow dx="0" dy="4" stdDeviation="6" flood-opacity="0.15"/>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="700" height="320" fill="#f8fafc" rx="12"/>
+
+  <!-- Desktop View -->
+  <g transform="translate(30, 25)" filter="url(#shadow)">
+    <!-- Monitor Outer Frame -->
+    <rect x="0" y="0" width="380" height="220" rx="8" fill="#1e293b"/>
+    <!-- Screen -->
+    <rect x="10" y="10" width="360" height="180" rx="4" fill="#ffffff"/>
+    <!-- Browser Header Bar -->
+    <rect x="10" y="10" width="360" height="24" fill="#e2e8f0" rx="4"/>
+    <circle cx="24" cy="22" r="4" fill="#ef4444"/>
+    <circle cx="36" cy="22" r="4" fill="#f59e0b"/>
+    <circle cx="48" cy="22" r="4" fill="#10b981"/>
+    <rect x="70" y="15" width="180" height="14" rx="3" fill="#cbd5e1"/>
+    <!-- Content: Horizontal Flex Items -->
+    <rect x="25" y="55" width="95" height="110" rx="6" fill="#3b82f6"/>
+    <text x="72" y="115" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#ffffff" text-anchor="middle">Box 1</text>
+    
+    <rect x="140" y="55" width="95" height="110" rx="6" fill="#60a5fa"/>
+    <text x="187" y="115" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#ffffff" text-anchor="middle">Box 2</text>
+    
+    <rect x="255" y="55" width="95" height="110" rx="6" fill="#93c5fd"/>
+    <text x="302" y="115" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#1e3a8a" text-anchor="middle">Box 3</text>
+
+    <!-- Monitor Stand -->
+    <path d="M165 220 L160 250 L220 250 L215 220 Z" fill="#475569"/>
+    <rect x="135" y="250" width="110" height="10" rx="3" fill="#334155"/>
+    <text x="190" y="278" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="#0f172a" text-anchor="middle">Desktop View: flex-direction: row</text>
+  </g>
+
+  <!-- Mobile View -->
+  <g transform="translate(470, 25)" filter="url(#shadow)">
+    <!-- Phone Body -->
+    <rect x="0" y="0" width="170" height="255" rx="20" fill="#1e293b"/>
+    <!-- Phone Screen -->
+    <rect x="8" y="16" width="154" height="223" rx="14" fill="#ffffff"/>
+    <!-- Speaker / Camera notch -->
+    <rect x="65" y="8" width="40" height="4" rx="2" fill="#475569"/>
+    <!-- Content: Vertical Flex Items -->
+    <rect x="20" y="32" width="130" height="52" rx="6" fill="#3b82f6"/>
+    <text x="85" y="63" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="#ffffff" text-anchor="middle">Box 1</text>
+    
+    <rect x="20" y="94" width="130" height="52" rx="6" fill="#60a5fa"/>
+    <text x="85" y="125" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="#ffffff" text-anchor="middle">Box 2</text>
+    
+    <rect x="20" y="156" width="130" height="52" rx="6" fill="#93c5fd"/>
+    <text x="85" y="187" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="#1e3a8a" text-anchor="middle">Box 3</text>
+
+    <text x="85" y="278" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="#0f172a" text-anchor="middle">Mobile View: column</text>
+  </g>
+</svg>
+

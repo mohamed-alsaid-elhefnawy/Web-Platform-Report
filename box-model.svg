@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 340" width="100%" height="auto" style="max-width: 500px; display: block; margin: auto;">
+  <rect x="10" y="10" width="580" height="320" rx="8" fill="#fbe6d4" stroke="#d97736" stroke-width="2" stroke-dasharray="6,4"/>
+  <text x="30" y="38" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#8c3e0d">Margin</text>
+  
+  <rect x="60" y="55" width="480" height="230" rx="6" fill="#fdecc8" stroke="#d49a2a" stroke-width="2"/>
+  <text x="80" y="82" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#8f630e">Border</text>
+  
+  <rect x="110" y="95" width="380" height="150" rx="4" fill="#d9eedb" stroke="#489d58" stroke-width="2" stroke-dasharray="4,3"/>
+  <text x="130" y="122" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#20662d">Padding</text>
+  
+  <rect x="170" y="135" width="260" height="70" rx="4" fill="#cbe2f8" stroke="#3b82f6" stroke-width="2"/>
+  <text x="300" y="177" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="#1d4ed8" text-anchor="middle">Content</text>
+</svg>
+

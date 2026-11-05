@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 650 200" width="100%" height="auto">
+  <defs>
+    <filter id="card-shadow" x="-5%" y="-5%" width="110%" height="115%">
+      <feDropShadow dx="0" dy="2" stdDeviation="4" flood-opacity="0.1"/>
+    </filter>
+  </defs>
+
+  <rect width="650" height="200" fill="#f8fafc" rx="10"/>
+
+  <!-- Color Card 1: Named Colors -->
+  <g transform="translate(25, 25)" filter="url(#card-shadow)">
+    <rect width="180" height="150" rx="8" fill="#ffffff" stroke="#e2e8f0" stroke-width="1.5"/>
+    <rect x="15" y="15" width="150" height="55" rx="6" fill="#e53e3e"/>
+    <text x="90" y="50" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#ffffff" text-anchor="middle">red</text>
+    <text x="90" y="98" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="#2d3748" text-anchor="middle">Color Name</text>
+    <text x="90" y="125" font-family="Courier New, monospace" font-size="12" fill="#718096" text-anchor="middle">color: red;</text>
+  </g>
+
+  <!-- Color Card 2: HEX Values -->
+  <g transform="translate(235, 25)" filter="url(#card-shadow)">
+    <rect width="180" height="150" rx="8" fill="#ffffff" stroke="#e2e8f0" stroke-width="1.5"/>
+    <rect x="15" y="15" width="150" height="55" rx="6" fill="#3182ce"/>
+    <text x="90" y="50" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#ffffff" text-anchor="middle">#3182CE</text>
+    <text x="90" y="98" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="#2d3748" text-anchor="middle">HEX Code</text>
+    <text x="90" y="125" font-family="Courier New, monospace" font-size="12" fill="#718096" text-anchor="middle">color: #3182ce;</text>
+  </g>
+
+  <!-- Color Card 3: RGB Values -->
+  <g transform="translate(445, 25)" filter="url(#card-shadow)">
+    <rect width="180" height="150" rx="8" fill="#ffffff" stroke="#e2e8f0" stroke-width="1.5"/>
+    <rect x="15" y="15" width="150" height="55" rx="6" fill="#38a169"/>
+    <text x="90" y="50" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="#ffffff" text-anchor="middle">rgb(56, 161, 105)</text>
+    <text x="90" y="98" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="#2d3748" text-anchor="middle">RGB Value</text>
+    <text x="90" y="125" font-family="Courier New, monospace" font-size="12" fill="#718096" text-anchor="middle">color: rgb(..);</text>
+  </g>
+</svg>
+

@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 650 220" width="100%" height="auto">
+  <defs>
+    <filter id="box-shadow" x="-5%" y="-5%" width="110%" height="115%">
+      <feDropShadow dx="0" dy="2" stdDeviation="4" flood-opacity="0.1"/>
+    </filter>
+  </defs>
+
+  <rect width="650" height="220" fill="#f8fafc" rx="10"/>
+
+  <!-- Left: Sans-Serif / Heading -->
+  <g transform="translate(25, 25)" filter="url(#box-shadow)">
+    <rect width="285" height="170" rx="8" fill="#ffffff" stroke="#e2e8f0" stroke-width="1.5"/>
+    <rect x="0" y="0" width="285" height="34" rx="8" fill="#edf2f7"/>
+    <text x="142" y="22" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#4a5568" text-anchor="middle">font-family: Arial, sans-serif</text>
+    
+    <text x="142" y="80" font-family="Arial, sans-serif" font-size="24" font-weight="bold" fill="#1a365d" text-anchor="middle">Heading Text</text>
+    <text x="142" y="115" font-family="Arial, sans-serif" font-size="13" fill="#4a5568" text-anchor="middle">font-size: 32px | font-weight: bold</text>
+    <text x="142" y="140" font-family="Arial, sans-serif" font-size="12" fill="#718096" text-anchor="middle">text-align: center</text>
+  </g>
+
+  <!-- Right: Serif / Paragraph -->
+  <g transform="translate(340, 25)" filter="url(#box-shadow)">
+    <rect width="285" height="170" rx="8" fill="#ffffff" stroke="#e2e8f0" stroke-width="1.5"/>
+    <rect x="0" y="0" width="285" height="34" rx="8" fill="#edf2f7"/>
+    <text x="142" y="22" font-family="Georgia, serif" font-size="12" font-weight="bold" fill="#4a5568" text-anchor="middle">font-family: Georgia, serif</text>
+    
+    <text x="20" y="75" font-family="Georgia, serif" font-size="16" fill="#2d3748">This is body paragraph text</text>
+    <text x="20" y="100" font-family="Georgia, serif" font-size="16" fill="#2d3748">styled with elegant serifs</text>
+    <text x="20" y="125" font-family="Georgia, serif" font-size="16" fill="#2d3748">and increased line-height.</text>
+    <text x="142" y="158" font-family="Georgia, serif" font-size="12" fill="#718096" text-anchor="middle">font-size: 18px | line-height: 1.6</text>
+  </g>
+</svg>
+
